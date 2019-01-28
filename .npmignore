@@ -1,0 +1,6 @@
+coverage
+test
+.envrc
+.nycrc
+.travis.yml
+.nyc_output
