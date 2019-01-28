@@ -1,0 +1,12 @@
+{
+  "reporter": [
+    "lcov",
+    "text-summary",
+    "json-summary",
+    "html"
+  ],
+  "cache": true,
+  "sourceMap": true,
+  "instrument": true,
+  "include": [ "index.js", "handlers/**/*.js" ]
+}

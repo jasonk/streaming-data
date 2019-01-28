@@ -1,0 +1,36 @@
+describe( 'streamer', () => {
+
+  it( 'should parse the test file', () => {
+    return testfile( 'test-file' ).then( data => data.should.eql( [
+      'This is a line.',
+      'This is another line.',
+      { this : 'is a single-line json.object' },
+      [ 'this', 'is', 'a', 'single-line', 'json.array' ],
+      { This : 'is some yaml' },
+      { This : 'Is Sparta!' },
+      'This is more text',
+      { this : 'is a multi-line json.object', it : 'has multi-lines' },
+      [ 'this is a multi-line json.array', 'it also has multi-lines' ],
+      [
+        "This is all verbatim, and should not get parsed..",
+        "{ this : 'is not a single-line json.object' }",
+        "[ 'this', 'is', 'not', 'a', 'single-line', 'json.array' ]",
+        "---",
+        "This: is not some yaml",
+        "---",
+        "This: Is Not Sparta!",
+        "...",
+        "This really is more text",
+        "{",
+        "  this : 'is not a multi-line json.object',",
+        "  it   : 'does have multi-lines',",
+        "}",
+        "[",
+        "  'this is not a multi-line json.array',",
+        "  'it also does have multi-lines',",
+        "]",
+      ].join( '\n' ),
+    ] ) );
+  } );
+
+} );

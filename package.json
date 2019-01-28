@@ -1,0 +1,25 @@
+{
+  "name": "streaming-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "eslint": "eslint ."
+  },
+  "keywords": [],
+  "author": "Jason Kohles <email@jasonkohles.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "js-yaml": "^3.12.1",
+    "json5": "^2.1.0"
+  },
+  "devDependencies": {
+    "callback-stream": "^1.1.0",
+    "chai": "^4.2.0",
+    "documentation": "^9.1.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
